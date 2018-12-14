@@ -11,14 +11,17 @@
       <el-col :span="24">
         <div class="grid-content bg-purple-light"><div class="article_content" v-html="item.articleContent"></div></div>
       </el-col>
+      <el-col :span="24">
+        <div class="article_category" v-if="item.articleCategory !== null && item.articleCategory !== ''">In {{item.articleCategory}}</div>
+        <span v-else></span>
+      </el-col>
     </el-row>
   </div>
 </div>
 </template>
-
 <script>
-  export default {
-    name: 'index',
+export default {
+    name:"category",
     data(){
       return {
         listQuery: {
@@ -28,31 +31,21 @@
         articleList:null
       }
     },
-    methods:{
-      getArticleList(){
-        this.$http.get('/springboot-mybatis/ArticleController/getArticlePages',{
-          params:this.listQuery}) 
-        .then(response =>   { 
-          debugger
-          this.articleList = response.data.data.pag
-          console.log(this.articleList);
-        })
-        .catch((response) => {
-          console.log(response);
-        });
-      },
-      init(){
-        this.getArticleList()
-      }
+    mounted:{
+        init()
     },
-    mounted(){
-      this.init()
+    methods:{
+        init(){
+            fetchBlogCategoryList()
+        },
+        fetchBlogCategoryList(){
+                
+        }
     }
-  }
+}
 </script>
-
 <style scoped>
-  .overall {
+.overall {
     width: 100%;
     padding: 0 15%;
     font-weight: 400;
@@ -62,6 +55,10 @@
     text-transform: none;
     text-decoration: none;
     margin: 0 0 1.6em;
+  }
+  .article_category{
+    font-family: Raleway;
+    color: grey;
   }
   .article_date{
     font-family: Raleway-Bold;
@@ -90,4 +87,3 @@
     margin-bottom: 1rem;
   }
 </style>
-

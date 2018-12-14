@@ -1,6 +1,6 @@
 <template>
   <div class="basics_info">
-    <img src="../assets/myself.jpg">
+    <img src="../../assets/myself.jpg">
     <div class="basics_explain">
       <!-- <span style="margin: 1rem 0;">冯剑</span> -->
       </br>

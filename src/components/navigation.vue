@@ -1,6 +1,6 @@
 <template>
   <div class="_layout">
-    <span class="_layout_left">JANEBLOG</span>
+    <router-link :to="'/Blog'"><span class="_layout_left">JANEBLOG</span></router-link>
     <div class="_layout_right">
       <ul>
         <li><router-link :to="'/About'">About</router-link></li>

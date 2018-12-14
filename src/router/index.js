@@ -1,15 +1,15 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import home from '@/views/index'
-import About from '@/views/basics'
+import Blog from '@/views/Blog'
+import About from '@/views/About'
 Vue.use(Router)
 
 export default new Router({
   routes: [
     {
       path: '/',
-      name:'home',
-      component: home
+      name:'Blog',
+      component: Blog
     },
     {
       path:'/About',
@@ -19,7 +19,7 @@ export default new Router({
     {
       path:'/Blog',
       name:'Blog',
-      component:home
+      component:Blog
     }
   ]
 })
