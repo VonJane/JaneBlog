@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Blog from '@/views/Blog'
 import About from '@/views/About'
 import Category from '@/views/Category'
+import Detail from '@/views/Detail'
 Vue.use(Router)
 
 export default new Router({
@@ -26,6 +27,11 @@ export default new Router({
       path:'/Category',
       name:'Category',
       component:Category
+    },
+    {
+      path:'/Detail',
+      name:'Detail',
+      component:Detail
     }
   ]
 })

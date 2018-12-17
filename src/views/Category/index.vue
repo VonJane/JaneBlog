@@ -1,9 +1,9 @@
 <template >
 <div>
   <div class="overall"  >
-    <el-row v-for="item in articleList" :key="item.id">
+    <el-row v-for="(item,index) in articleList" :key="item.id">
       <el-col :span="24">
-        <div class="grid-content bg-purple-dark"><h1 class="headline" >{{item.articleTitle}}</h1></div>
+        <router-link :to="{path: '/Detail', query: {articleId:item.id}}"><div class="grid-content bg-purple-dark"><h1 class="headline" >{{item.articleTitle}}</h1></div></router-link>
       </el-col>
       <el-col :span="24">
         <div class="grid-content bg-purple-light"><h3 class="article_date" style="font-style: oblique;" >{{item.createDate}}</h3></div>
@@ -12,8 +12,13 @@
         <div class="grid-content bg-purple-light"><div class="article_content" v-html="item.articleContent"></div></div>
       </el-col>
       <el-col :span="24">
-        <div class="article_category" v-if="item.articleCategory !== null && item.articleCategory !== ''">In {{item.articleCategory}}</div>
-        <span v-else></span>
+        <a href="javascript:window.location.reload()">
+          <div class="article_category" v-if="item.articleCategory !== null && item.articleCategory !== ''">In {{item.articleCategory}}</div>
+          <span v-else></span>
+        </a>
+      </el-col>
+      <el-col :span="24">
+        <div v-if="index !== articleList.length-1"><br/><br/><br/></div>
       </el-col>
     </el-row>
   </div>
@@ -21,7 +26,7 @@
 </template>
 <script>
 export default {
-    name:"category",
+    name:"Category",
     data(){
       return {
         listQuery: {
