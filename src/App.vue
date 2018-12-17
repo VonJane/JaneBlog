@@ -12,6 +12,7 @@
   import navigation from './components/navigation';
   import bottom from './components/bottom';
 
+
   export default {
     name: 'App',
     components: {

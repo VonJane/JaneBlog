@@ -3,7 +3,7 @@
   <div class="overall"  >
     <el-row v-for="item in articleList" :key="item.id">
       <el-col :span="24">
-        <router-link :to="''"><div class="grid-content bg-purple-dark"><h1 class="headline" >{{item.articleTitle}}</h1></div></router-link>
+        <div class="grid-content bg-purple-dark"><h1 class="headline" >{{item.articleTitle}}</h1></div>
       </el-col>
       <el-col :span="24">
         <div class="grid-content bg-purple-light"><h3 class="article_date" style="font-style: oblique;" >{{item.createDate}}</h3></div>
@@ -12,53 +12,53 @@
         <div class="grid-content bg-purple-light"><div class="article_content" v-html="item.articleContent"></div></div>
       </el-col>
       <el-col :span="24">
-        <router-link :to="{path: '/Category', query: {categoryId:item.articleCategoryId}}">
-          <div class="article_category" v-if="item.articleCategory !== null && item.articleCategory !== ''">In {{item.articleCategory}}</div>
-          <span v-else></span>
-        </router-link>
+        <div class="article_category" v-if="item.articleCategory !== null && item.articleCategory !== ''">In {{item.articleCategory}}</div>
+        <span v-else></span>
       </el-col>
     </el-row>
   </div>
 </div>
 </template>
-
 <script>
-  export default {
-    name: 'index',
+export default {
+    name:"category",
     data(){
       return {
         listQuery: {
           pageNum: 1,
           pageSize: 10
         },
-        articleList:null
+        queryData: {
+          pageNum: 1,
+          pageSize: 10,
+          articleCategoryId:this.$route.query.categoryId
+        },
+        articleList:null,
       }
     },
     methods:{
-      getArticleList(){
-        this.$http.get('/springboot-mybatis/ArticleController/getArticlePagesForShow',{
-          params:this.listQuery}) 
-        .then(response =>   { 
-          debugger
-          this.articleList = response.data.data.pag
-          console.log(this.articleList);
-        })
-        .catch((response) => {
-          console.log(response);
-        });
-      },
-      init(){
-        this.getArticleList()
-      }
+        init(){
+          this.fetchBlogCategoryList()
+        },
+        fetchBlogCategoryList(){
+          this.$http.get('/springboot-mybatis/ArticleController/getArticleCategoryPages',{
+            params:this.queryData})
+            .then(response =>   {
+              this.articleList = response.data.data.pag
+              console.log(this.articleList);
+            })
+            .catch((response) => {
+              console.log(response);
+            });
+        }
     },
     mounted(){
       this.init()
     }
-  }
+}
 </script>
-
 <style scoped>
-  .overall {
+.overall {
     width: 100%;
     padding: 0 15%;
     font-weight: 400;
@@ -100,4 +100,3 @@
     margin-bottom: 1rem;
   }
 </style>
-

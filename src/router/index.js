@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Blog from '@/views/Blog'
 import About from '@/views/About'
+import Category from '@/views/Category'
 Vue.use(Router)
 
 export default new Router({
@@ -20,6 +21,11 @@ export default new Router({
       path:'/Blog',
       name:'Blog',
       component:Blog
+    },
+    {
+      path:'/Category',
+      name:'Category',
+      component:Category
     }
   ]
 })
