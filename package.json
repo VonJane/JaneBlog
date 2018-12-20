@@ -5,15 +5,18 @@
   "author": "Jane",
   "private": true,
   "scripts": {
-    "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
-    "build": "node build/build.js"
+    "build": "cross-env NODE_ENV=production node build/build.js"
   },
   "dependencies": {
     "axios": "^0.18.0",
+    "element-ui": "2.4.11",
+    "lib-flexible": "^0.3.2",
+    "px2rem-loader": "^0.1.9",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1",
-    "element-ui": "2.4.11"
+    "jquery" : "^2.2.3"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",

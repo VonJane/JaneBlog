@@ -14,7 +14,7 @@
 </template>
 <script>
   export default {
-    name: 'info'
+    name: 'About'
   }
 </script>
 <style scoped>
@@ -33,7 +33,7 @@
   }
   .basics_explain {
     font-weight: 400;
-    font-family: NotoSerifSC-ExtraLight;
+    font-family: "Hiragino Sans GB";
     font-style: normal;
     line-height: 1.6em;
     font-size: 16px;
@@ -43,11 +43,11 @@
     text-align: left;
     width: 40%;
   }
-  .basics_explain span {
-    font-family: NotoSansSC-Bold;
-    color: grey;
-    font-size: 1.5rem;
-  }
+  /*.basics_explain span {*/
+    /*font-family: NotoSansSC-Bold;*/
+    /*color: grey;*/
+    /*font-size: 1.5rem;*/
+  /*}*/
   .span_ {
     background: linear-gradient(to right, #a24f4f, blue);
     -webkit-background-clip: text;

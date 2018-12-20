@@ -2,7 +2,7 @@
 <div>
   <div class="overall"  >
     <el-row v-for="(item,index) in articleList" :key="item.id">
-      <el-col :span="24">
+      <el-col :span="40">
         <router-link :to="{path: '/Detail', query: {articleId:item.id}}"><div class="grid-content bg-purple-dark"><h1 class="headline" >{{item.articleTitle}}</h1></div></router-link>
       </el-col>
       <el-col :span="24">
@@ -66,7 +66,7 @@ export default {
 .overall {
     width: 100%;
     padding: 0 15%;
-    font-weight: 400;
+    /*font-weight: 400;*/
     font-style: normal;
     line-height: 1.6em;
     font-size: 16px;
@@ -90,14 +90,15 @@ export default {
     width: 100%;
   }
   .article_content{
-    font-family: NotoSansSC-Light;
+    font-family: "Hiragino Sans GB";
+    color: rgba(28,32,24,.8);
     padding: 10px 0 50px 0;
   }
   .headline {
-    font-weight: 400;
+    font-weight: bold;
     font-style: normal;
     /* line-height: 1.5em;  */
-    font-family: NotoSansSC-Bold;
+    font-family: "PingFang SC";
     font-size: 36px;
     text-transform: none;
     text-decoration: none;

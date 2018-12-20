@@ -19,6 +19,7 @@
       </el-col>
       <el-col :span="24">
         <div v-if="index !== articleList.length-1"><br/><br/><br/></div>
+        <br v-else />
       </el-col>
     </el-row>
   </div>
@@ -39,8 +40,10 @@
     },
     methods:{
       getArticleList(){
-        this.$http.get('/springboot-mybatis/ArticleController/getArticlePagesForShow',{
-          params:this.listQuery}) 
+        let that = this
+        // console.log(this)
+        this.$http.get(that.$baseUrl+'/springboot-mybatis/ArticleController/getArticlePagesForShow',{
+          params:this.listQuery})
         .then(response =>   { 
           debugger
           this.articleList = response.data.data.pag
@@ -62,22 +65,23 @@
 
 <style scoped>
   .overall {
-    width: 100%;
+    width: 78.612%;
     padding: 0 15%;
     font-weight: 400;
     font-style: normal;
     line-height: 1.6em;
-    font-size: 16px;
+    font-size: 1.6em;
     text-transform: none;
     text-decoration: none;
-    margin: 0 0 1.6em;
+    /*margin: 0 0 1.6em;*/
   }
+
   .article_category{
     font-family: Raleway;
     color: grey;
   }
   .article_date{
-    font-family: Raleway-Bold;
+    font-family: Raleway;
     color: grey;
   }
   .overall img {
@@ -89,22 +93,38 @@
   }
 
   .article_content{
-    font-family: NotoSansSC-Light;
+    font-family: "Hiragino Sans GB";
+    color: rgba(28,32,24,.8);
     padding: 10px 0 50px 0;
   }
   .headline {
-    font-weight: 400;
+    font-weight: 500;
+    color: #1c2018;
     font-style: normal;
-    /* line-height: 1.5em;  */
-    font-family: NotoSansSC-Bold;
+    line-height: 1.5em;
+    font-family: "PingFang SC";
     font-size: 36px;
     text-transform: none;
     text-decoration: none;
     letter-spacing: .02em;
-    margin-bottom: 1rem;
+    /*margin-bottom: 1rem;*/
   }
   .headline:hover{
     color:#0085bd;
+  }
+  @media screen and (max-width: 500px) {
+    .overall {
+      /*background-color: #A0A0A0;*/
+      width: 100%;
+      padding: 0 15%;
+      font-weight: 400;
+      font-style: normal;
+      line-height: 1.6em;
+      font-size: 0.5rem;
+      text-transform: none;
+      text-decoration: none;
+      margin: 0 0 1.6em;
+    }
   }
 </style>
 
