@@ -65,7 +65,8 @@
 
 <style scoped>
   .overall {
-    width: 78.612%;
+    box-sizing:content-box;
+    width: 70%;
     padding: 0 15%;
     font-weight: 400;
     font-style: normal;
@@ -73,7 +74,7 @@
     font-size: 1.6em;
     text-transform: none;
     text-decoration: none;
-    /*margin: 0 0 1.6em;*/
+    /*margin: 0;*/
   }
 
   .article_category{
@@ -112,18 +113,20 @@
   .headline:hover{
     color:#0085bd;
   }
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 1366px) {
     .overall {
       /*background-color: #A0A0A0;*/
-      width: 100%;
+      /*box-sizing:inherit;*/
+      width: 70%;
       padding: 0 15%;
-      font-weight: 400;
+      font-weight: 500;
       font-style: normal;
       line-height: 1.6em;
       font-size: 0.5rem;
       text-transform: none;
       text-decoration: none;
-      margin: 0 0 1.6em;
+      /*margin: 0 0 1.5em;*/
+
     }
   }
 </style>

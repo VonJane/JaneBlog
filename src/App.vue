@@ -52,7 +52,7 @@
     padding: 90px 90px 0;
   }
   #cd-nav{
-    display: none;
+    /*display: none;*/
   }
   #app {
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
@@ -61,7 +61,7 @@
     text-align: center;
     /*color: #2c3e50;*/
   }
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 1367px) {
     .canvas{
       max-width: 100%;
       margin: 0 auto;
