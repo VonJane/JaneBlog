@@ -41,7 +41,6 @@
         this.$http.get('/springboot-mybatis/ArticleController/getArticleById',{
           params:{"id":this.articleId}})
           .then(response =>   {
-            debugger
             this.article = response.data.data
             console.log(this.articleList);
           })
@@ -57,21 +56,23 @@
 </script>
 <style scoped>
   .overall {
+    box-sizing:content-box;
     width: 100%;
     font-weight: 400;
     font-style: normal;
     line-height: 1.6em;
-    font-size: 16px;
+    font-size: 1.6em;
     text-transform: none;
     text-decoration: none;
-    margin: 0 0 1.6em;
+    /*margin: 0;*/
   }
+
   .article_category{
     font-family: Raleway;
     color: grey;
   }
   .article_date{
-    font-family: Raleway-Bold;
+    font-family: Raleway;
     color: grey;
   }
   .overall img {
@@ -81,19 +82,43 @@
     white-space: normal;
     width: 100%;
   }
+
   .article_content{
-    font-family: NotoSansSC-Light;
+    font-family: "Hiragino Sans GB";
+    color: rgba(28,32,24,.8);
     padding: 10px 0 50px 0;
   }
   .headline {
-    font-weight: 400;
+    font-weight: 500;
+    color: #1c2018;
     font-style: normal;
-    /* line-height: 1.5em;  */
-    font-family: NotoSansSC-Bold;
+    line-height: 1.5em;
+    font-family: "PingFang SC";
     font-size: 36px;
     text-transform: none;
     text-decoration: none;
     letter-spacing: .02em;
-    margin-bottom: 1rem;
+    /*margin-bottom: 1rem;*/
+  }
+  .headline:hover{
+    color:#0085bd;
+  }
+  @media screen and (max-width: 1366px) {
+    .overall {
+      /*background-color: #A0A0A0;*/
+      /*box-sizing:inherit;*/
+      width: 70%;
+      padding: 0 15%;
+      font-weight: 500;
+      font-style: normal;
+      line-height: 1.6em;
+      font-size: 0.5rem;
+      text-transform: none;
+      text-decoration: none;
+      /*margin: 0 0 1.5em;*/
+
+    }
   }
 </style>
+
+

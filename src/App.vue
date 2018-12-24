@@ -52,7 +52,7 @@
     padding: 90px 90px 0;
   }
   #cd-nav{
-    /*display: none;*/
+    display: none;
   }
   #app {
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
