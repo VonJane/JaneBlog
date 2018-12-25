@@ -3,22 +3,10 @@
     src: url('Raleway-Bold.ttf');  
     font-weight: bold;  
     font-style: normal;  
-}  
-@font-face {  
-    font-family: 'NotoSansSC-Bold';  
-    src: url('NotoSansSC-Bold.otf');  
-    font-weight: bold;  
-    font-style: normal;  
-}  
-@font-face {  
-    font-family: 'NotoSansSC-Light';  
-    src: url('NotoSansSC-Light.otf');  
-    font-weight: bold;  
-    font-style: normal;  
-}  
-@font-face {  
-    font-family: 'NotoSerifSC-ExtraLight';  
-    src: url('NotoSerifSC-ExtraLight.otf');  
-    font-weight: bold;  
-    font-style: normal;  
-} 
+}
+@font-face {
+  font-family: 'Raleway-Light';
+  src: url('Raleway-Light.ttf');
+  font-weight: bold;
+  font-style: normal;
+}

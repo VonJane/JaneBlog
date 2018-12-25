@@ -1,11 +1,13 @@
 <template>
   <div class="_layout">
-    <router-link :to="'/Blog'"><span class="_layout_left">JANEBLOG</span></router-link>
+    <div class="_layout_left">
+      <router-link :to="'/Blog'"><span id="logo">JANEBLOG</span></router-link>
+    </div>
     <div class="_layout_right">
       <ul>
-        <li><router-link :to="'/About'">About</router-link></li>
-        <li><router-link :to="'/TimeLine'">TimeLine</router-link></li>
         <li><router-link :to="'/Blog'">Blog</router-link></li>
+        <li><router-link :to="'/TimeLine'">TimeLine</router-link></li>
+        <li><router-link :to="'/About'">About</router-link></li>
       </ul>
     </div>
   </div>
@@ -23,28 +25,31 @@
 
 <style scoped>
   ._layout {
-    padding: 0rem 0rem;
     width: 100%;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 6rem;
+    font-size: 10px;
+    margin-bottom: 2rem;
   }
-  ._layout_left {
-    font-size: 36px;
+  ._layout_left{
+    text-align: center;
+  }
+  #logo {
+    font-size: 0.8rem;
     font-family: Raleway-Bold;
     color: #217ca6;
   }
-  ._layout_left:hover {
+  #logo:hover {
     color: black;
   }
   ._layout_right li {
-    float: left;
-    width: 4.5rem;
-    font-family: Raleway;
-    font-weight: 400;
+    float: right;
+    font-family: Raleway-Light;
+    padding-left: 0.5rem;
+    padding-top: 0.2rem;
+    font-weight: 500;
     font-style: normal;
     line-height: 1.6em;
-    font-size: 16px;
     text-transform: capitalize;
     letter-spacing: .05em;
   }
@@ -59,5 +64,22 @@
   ._layout_left,._layout_right
   {
     cursor: pointer;
+  }
+  @media screen and (max-width: 1366px) {
+    ._layout_right{
+      display: none;
+    }
+    ._layout_left{
+      text-align: center;
+    }
+    ._layout {
+      padding: 90px 90px 0;
+      text-align: center;
+      display: flex;
+      /*justify-content: space-between;*/
+      margin-bottom: 1rem;
+      justify-content:center;
+      align-items:center;
+    }
   }
 </style>

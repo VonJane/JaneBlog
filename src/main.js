@@ -6,20 +6,22 @@ import router from './router'
 import axios from 'axios'
 import element from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
+import 'lib-flexible/flexible.js'
+import $ from 'jquery'
 
 import '@/icons'
 
 Vue.use(element)
 
 Vue.config.productionTip = false
-
+Vue.prototype.$baseUrl = process.env.NODE_ENV === 'development'?"":"https://www.janeblog.cn:443"
 Vue.prototype.$http = axios
-
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
   axios,
+  $,
   components: { App },
   template: '<App/>'
 })
