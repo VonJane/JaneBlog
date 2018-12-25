@@ -37,8 +37,9 @@
         this.fetchBlogCategoryList()
       },
       fetchBlogCategoryList(){
-        console.log(this.articleId)
-        this.$http.get('/springboot-mybatis/ArticleController/getArticleById',{
+        // console.log(this.articleId)
+        let that = this
+        this.$http.get(that.$baseUrl+'/springboot-mybatis/ArticleController/getArticleById',{
           params:{"id":this.articleId}})
           .then(response =>   {
             this.article = response.data.data

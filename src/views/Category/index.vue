@@ -47,7 +47,8 @@ export default {
           this.fetchBlogCategoryList()
         },
         fetchBlogCategoryList(){
-          this.$http.get('/springboot-mybatis/ArticleController/getArticleCategoryPages',{
+          let that = this
+          this.$http.get(that.$baseUrl+'/springboot-mybatis/ArticleController/getArticleCategoryPages',{
             params:this.queryData})
             .then(response =>   {
               this.articleList = response.data.data.pag
