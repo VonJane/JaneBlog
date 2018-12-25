@@ -14,7 +14,7 @@ import '@/icons'
 Vue.use(element)
 
 Vue.config.productionTip = false
-Vue.prototype.$baseUrl = process.env.NODE_ENV === 'development'?"":"https://39.105.10.69:443"
+Vue.prototype.$baseUrl = process.env.NODE_ENV === 'development'?"":"https://www.janeblog.cn:443"
 Vue.prototype.$http = axios
 /* eslint-disable no-new */
 new Vue({

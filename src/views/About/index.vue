@@ -12,7 +12,7 @@
       but some of us are looking at the stars.
     </div>
   </div>
-  <div id="myself">
+  <div id="myself" style="font-family: Raleway-Light">
     <p>
       We are all in the gutter, but some of us are looking at the stars.
     </p>
@@ -88,7 +88,7 @@
     #myself{
       display: block;
       font-weight: 400;
-      font-family: "Raleway";
+      font-family: Raleway-Light;
       font-style: normal;
       line-height: 1.6em;
       font-size: 14px;

@@ -68,11 +68,11 @@
   }
 
   .article_category{
-    font-family: Raleway;
+    font-family: Raleway-Light;
     color: grey;
   }
   .article_date{
-    font-family: Raleway;
+    font-family: Raleway-Light;
     color: grey;
   }
   .overall img {
