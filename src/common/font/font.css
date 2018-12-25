@@ -4,3 +4,9 @@
     font-weight: bold;  
     font-style: normal;  
 }
+@font-face {
+  font-family: 'Raleway-Light';
+  src: url('Raleway-Light.ttf');
+  font-weight: bold;
+  font-style: normal;
+}

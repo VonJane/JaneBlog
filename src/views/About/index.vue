@@ -4,11 +4,11 @@
     <img src="../../assets/myself.jpg">
     <div class="basics_explain">
       <!-- <span style="margin: 1rem 0;">冯剑</span> -->
-      </br>
+      <br />
       <!-- 小姐姐专线：<span class="span_">761673647</span> -->
-      </br>
+      <br />
       We are all in the gutter,
-      </br>
+      <br />
       but some of us are looking at the stars.
     </div>
   </div>
@@ -40,7 +40,7 @@
   }
   .basics_explain {
     font-weight: 400;
-    font-family: "Raleway";
+    font-family: Raleway-Light;
     font-style: normal;
     line-height: 1.6em;
     font-size: 14px;
@@ -66,8 +66,17 @@
      /*font-size: 1rem;*/
   /*}*/
   @media screen and (max-width: 1366px) {
+    .basics_info {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 5%;
+      position: relative;
+      justify-content:center;
+      align-items:center;
+    }
     .basics_info img {
       /* border: 1px solid rgb(226, 223, 223); */
+      vertical-align:text-top;
       width: auto;
       height: auto;
       max-width: 100%;

@@ -45,7 +45,7 @@ export default {
       text-align: center;
       /*margin:3rem;*/
       font-size: 0.2rem;
-      font-family: Raleway;
+      font-family: Raleway-Light;
       color: rgba(28,32,24,.8);
     }
 

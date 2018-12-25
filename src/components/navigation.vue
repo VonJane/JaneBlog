@@ -44,8 +44,9 @@
   }
   ._layout_right li {
     float: right;
-    font-family: Raleway;
+    font-family: Raleway-Light;
     padding-left: 0.5rem;
+    padding-top: 0.2rem;
     font-weight: 500;
     font-style: normal;
     line-height: 1.6em;
@@ -68,16 +69,17 @@
     ._layout_right{
       display: none;
     }
+    ._layout_left{
+      text-align: center;
+    }
     ._layout {
       padding: 90px 90px 0;
       text-align: center;
-      width: 100%;
       display: flex;
-      justify-content: space-between;
+      /*justify-content: space-between;*/
       margin-bottom: 1rem;
-    }
-    ._layout_left{
-      text-align: center;
+      justify-content:center;
+      align-items:center;
     }
   }
 </style>
