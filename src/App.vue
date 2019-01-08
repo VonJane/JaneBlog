@@ -4,7 +4,7 @@
     <navigation></navigation>
     <router-view/>
     <bottom></bottom>
-    <div id="cd-nav">
+    <div id="cd-nav" style="display: none">
       <a class="cd-nav-trigger">Menu<span></span></a>
       <nav id="cd-main-nav">
         <ul>
@@ -50,9 +50,6 @@
     max-width: 66.17%;
     margin: 0 auto;
     padding: 90px 90px 0;
-  }
-  #cd-nav{
-    display: none;
   }
   #app {
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
