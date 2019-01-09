@@ -3,7 +3,7 @@
   <div class="overall"  >
     <el-row v-for="(item,index) in articleList" :key="item.id">
       <el-col :span="24">
-        <router-link :to="{path: '/Detail', query: {articleId:item.id}}"><div class="grid-content bg-purple-dark"><h1 class="headline" >{{item.articleTitle}}</h1></div></router-link>
+        <router-link :to="{path: '/Detail', query: {articleId:item.id}}"><div class="grid-content bg-purple-dark"><h3 class="headline" >{{item.articleTitle}}</h3></div></router-link>
       </el-col>
       <el-col :span="24">
         <div class="grid-content bg-purple-light"><h3 class="article_date" style="font-style: oblique;" >{{item.createDate}}</h3></div>
@@ -44,8 +44,7 @@
         // console.log(this)
         this.$http.get(that.$baseUrl+'/springboot-mybatis/ArticleController/getArticlePagesForShow',{
           params:this.listQuery})
-        .then(response =>   { 
-          debugger
+        .then(response =>   {
           this.articleList = response.data.data.pag
           console.log(this.articleList);
         })
@@ -104,7 +103,7 @@
     font-style: normal;
     line-height: 1.5em;
     font-family: "PingFang SC";
-    font-size: 36px;
+    font-size: 0.65rem;
     text-transform: none;
     text-decoration: none;
     letter-spacing: .02em;
@@ -122,7 +121,7 @@
       font-weight: 500;
       font-style: normal;
       line-height: 1.6em;
-      font-size: 0.5rem;
+      /*font-size: 0.5rem;*/
       text-transform: none;
       text-decoration: none;
       /*margin: 0 0 1.5em;*/
