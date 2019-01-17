@@ -22,6 +22,22 @@
           <br v-else />
         </el-col>
       </el-row>
+      <hr />
+      <el-pagination
+        small
+        layout="prev, next"
+        page-size="10"
+        prev-text="上一页"
+        next-text="下一页"
+        :current-page="pagination.pageNum"
+        :page-sizes="pagination.pageSizes"
+        :page-size="pagination.pageSize"
+        :total="pagination.total"
+        @size-change="handleSizeChange"
+        @current-change="handleCurrentChange"
+      >
+      </el-pagination>
+      <hr/>
     </div>
   </div>
 </template>
@@ -30,13 +46,15 @@ export default {
     name:"Category",
     data(){
       return {
-        listQuery: {
+        pagination:{
           pageNum: 1,
-          pageSize: 10
+          pageSizes: [10, 20, 30, 50],
+          pageSize: 10,
+          total: 1
         },
         queryData: {
-          pageNum: 1,
-          pageSize: 10,
+          pageNum: Number,
+          pageSize: Number,
           articleCategoryId:this.$route.query.categoryId
         },
         articleList:null,
@@ -46,13 +64,25 @@ export default {
         init(){
           this.fetchBlogCategoryList()
         },
+      // pageSize
+      handleSizeChange(num) {
+        this.pagination.pageSize = this.queryData.pageSize = num
+        this.fetchBlogCategoryList()
+      },
+      // 当前page
+      handleCurrentChange(num) {
+        this.pagination.pageNum = this.queryData.pageNum = num
+        this.fetchBlogCategoryList()
+      },
         fetchBlogCategoryList(){
+          this.queryData.pageNum = this.pagination.pageNum
+          this.queryData.pageSize = this.pagination.pageSize
           let that = this
           this.$http.get(that.$baseUrl+'/springboot-mybatis/ArticleController/getArticleCategoryPages',{
             params:this.queryData})
             .then(response =>   {
               this.articleList = response.data.data.pag
-              console.log(this.articleList);
+              this.pagination.total = parseInt(response.data.data.total)
             })
             .catch((response) => {
               console.log(response);
@@ -105,7 +135,7 @@ export default {
     font-style: normal;
     line-height: 1.5em;
     font-family: "PingFang SC";
-    font-size: 36px;
+    font-size: 0.65rem;
     text-transform: none;
     text-decoration: none;
     letter-spacing: .02em;

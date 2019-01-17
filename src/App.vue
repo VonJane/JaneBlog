@@ -46,6 +46,9 @@
   @import url('../static/css/clear.css');
   @import url('common/font/font.css');
   @import url('../static/css/menu.css');
+  ::selection{background:#B3E5FB; color:black;}
+  ::-moz-selection{background:#B3E5FB; color:black;}
+  ::-webkit-selection{background:#B3E5FB; color:black;}
   .canvas{
     max-width: 66.17%;
     margin: 0 auto;
