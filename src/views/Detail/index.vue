@@ -95,7 +95,7 @@
     font-style: normal;
     line-height: 1.5em;
     font-family: "PingFang SC";
-    font-size: 36px;
+    font-size: 0.65rem;
     text-transform: none;
     text-decoration: none;
     letter-spacing: .02em;

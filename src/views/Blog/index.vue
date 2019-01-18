@@ -22,6 +22,22 @@
         <br v-else />
       </el-col>
     </el-row>
+    <hr/>
+    <el-pagination
+      small
+      layout="prev, next"
+      page-size="10"
+      prev-text="上一页"
+      next-text="下一页"
+      :current-page="pagination.pageNum"
+      :page-sizes="pagination.pageSizes"
+      :page-size="pagination.pageSize"
+      :total="pagination.total"
+      @size-change="handleSizeChange"
+      @current-change="handleCurrentChange"
+    >
+    </el-pagination>
+    <hr/>
   </div>
 </div>
 </template>
@@ -32,25 +48,48 @@
     data(){
       return {
         listQuery: {
-          pageNum: 1,
-          pageSize: 10
+          pageNum: Number,
+          pageSize: Number
         },
+        pagination:{
+          pageNum: 1,
+          pageSizes: [10, 20, 30, 50],
+          pageSize: 10,
+          total: 1
+        },
+
         articleList:null
       }
     },
     methods:{
+      // pageSize
+      handleSizeChange(num) {
+        this.pagination.pageSize = this.listQuery.pageSize = num
+        this.getArticleList()
+      },
+      // 当前page
+      handleCurrentChange(num) {
+        this.pagination.pageNum = this.listQuery.pageNum = num
+        this.getArticleList()
+      },
       getArticleList(){
+        this.listQuery.pageNum = this.pagination.pageNum
+        this.listQuery.pageSize = this.pagination.pageSize
         let that = this
         // console.log(this)
         this.$http.get(that.$baseUrl+'/springboot-mybatis/ArticleController/getArticlePagesForShow',{
           params:this.listQuery})
         .then(response =>   {
+          debugger
           this.articleList = response.data.data.pag
+          this.pagination.total = parseInt(response.data.data.total)
           console.log(this.articleList);
         })
         .catch((response) => {
           console.log(response);
         });
+      },handleSizeChange(){
+        this.getArticleList()
       },
       init(){
         this.getArticleList()

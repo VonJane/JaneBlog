@@ -9,7 +9,8 @@
       </div>
     </div>
     <div id="copy">
-      <p style="">COPYRIGHT 2007-2018 JANE CARRIER</p>
+      <p style="">COPYRIGHT 2019 JANE CARRIER</p>
+      <a href="http://www.miitbeian.gov.cn/" >辽ICP备19000420号</a>
     </div><br/><br/>
   </el-footer>
 </template>
