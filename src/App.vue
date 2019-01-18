@@ -64,6 +64,9 @@
     text-align: center;
     /*color: #2c3e50;*/
   }
+  .wscnph img{
+    max-width: 34.2rem;
+  }
   @media screen and (max-width: 1367px) {
     .canvas{
       max-width: 100%;
