@@ -3,8 +3,8 @@
     <div id="info-footer">
       <div id="infoFooterBlock" class="info-footer-inline"></div>
       <div id="socialLink" class="info-footer-inline">
-        <a href="https://twitter.com/JaneVon_"><svg-icon id="#twitter" icon-class="Twitter"  class-name='custom-class' /></a>
-        <a href="https://www.facebook.com/jian.wind.1"><svg-icon id="facebook" icon-class="Facebook"  class-name='custom-class' /></a>
+        <!--<a href="https://twitter.com/JaneVon_"><svg-icon id="#twitter" icon-class="Twitter"  class-name='custom-class' /></a>-->
+        <!--<a href="https://www.facebook.com/jian.wind.1"><svg-icon id="facebook" icon-class="Facebook"  class-name='custom-class' /></a>-->
         <a href="https://github.com/VonJane"><svg-icon id="github" icon-class="Github"  class-name='custom-class' /></a>
       </div>
     </div>

@@ -54,9 +54,7 @@
     margin: 0 auto;
     padding: 90px 90px 0;
   }
-  #cd-nav{
-    display: none;
-  }
+
   #app {
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -67,11 +65,17 @@
   .wscnph img{
     max-width: 34.2rem;
   }
-  @media screen and (max-width: 1367px) {
+  #cd-main-nav{
+    display: none;
+  }
+  @media screen and (max-width: 1370px) {
     .canvas{
       max-width: 100%;
       margin: 0 auto;
       padding: 0;
+    }
+    #cd-main-nav{
+      display: block;
     }
     #cd-nav{
       display: block;

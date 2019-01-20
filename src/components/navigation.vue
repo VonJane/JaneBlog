@@ -6,7 +6,7 @@
     <div class="_layout_right">
       <ul>
         <li><router-link :to="'/Blog'">Blog</router-link></li>
-        <li><router-link :to="'/TimeLine'">TimeLine</router-link></li>
+        <li><router-link :to="'/TreeHole'">TreeHole</router-link></li>
         <li><router-link :to="'/About'">About</router-link></li>
       </ul>
     </div>
@@ -65,7 +65,7 @@
   {
     cursor: pointer;
   }
-  @media screen and (max-width: 1366px) {
+  @media screen and (max-width: 1370px) {
     ._layout_right{
       display: none;
     }
