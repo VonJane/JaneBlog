@@ -108,7 +108,7 @@ Main components
 #cd-nav li:last-child a {
   border-bottom: none;
 }
-@media only screen and (min-width: 1170px) {
+@media only screen and (min-width: 1370px) {
   #cd-nav ul {
     /* the navigation moves to the top */
     position: absolute;
@@ -282,7 +282,7 @@ Main components
   -o-transform: rotate(225deg);
   transform: rotate(225deg);
 }
-@media only screen and (min-width: 1170px) {
+@media only screen and (min-width: 1370px) {
   .cd-nav-trigger {
     /* the the menu triger is hidden by default on desktop devices */
     visibility: hidden;

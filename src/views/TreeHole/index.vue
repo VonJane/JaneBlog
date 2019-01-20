@@ -12,7 +12,7 @@
         <el-input size="mini" ></el-input>
       </el-form-item>
       <el-form-item label="联系邮箱" label-width="100px">
-        <el-input size="mini" ></el-input>
+        <el-input size="mini" ></el-input>7
       </el-form-item>
       <el-form-item label="想说的话" label-width="100px">
         <el-input
