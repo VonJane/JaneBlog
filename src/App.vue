@@ -9,7 +9,7 @@
       <nav id="cd-main-nav">
         <ul>
           <li><router-link :to="'/About'">About</router-link></li>
-          <li><router-link :to="'/TimeLine'">TimeLine</router-link></li>
+          <li><router-link :to="'/TreeHole'">TreeHole</router-link></li>
           <li><router-link :to="'/Blog'">Blog</router-link></li>
           <li><a @click="gotoTop">返回顶部</a></li>
         </ul>
@@ -65,7 +65,7 @@
   .wscnph img{
     max-width: 34.2rem;
   }
-  #cd-main-nav{
+  #cd-nav{
     display: none;
   }
   @media screen and (max-width: 1370px) {
@@ -73,9 +73,6 @@
       max-width: 100%;
       margin: 0 auto;
       padding: 0;
-    }
-    #cd-main-nav{
-      display: block;
     }
     #cd-nav{
       display: block;
