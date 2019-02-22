@@ -79,6 +79,7 @@
 .box-card{
   width: 12rem;
 }
+
   @media screen and (max-width: 1366px) {
     .box-card{
       width: 7rem;
