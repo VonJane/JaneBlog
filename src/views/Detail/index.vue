@@ -43,7 +43,7 @@
           params:{"id":this.articleId}})
           .then(response =>   {
             this.article = response.data.data
-            console.log(this.articleList);
+            // console.log(this.articleList);
           })
           .catch((response) => {
             console.log(response);

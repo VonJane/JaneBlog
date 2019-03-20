@@ -76,9 +76,9 @@
   #overall{
     padding: 2% 15% 15% 15%;
   }
-.box-card{
-  width: 12rem;
-}
+  .box-card{
+    width: 12rem;
+  }
 
   @media screen and (max-width: 1366px) {
     .box-card{

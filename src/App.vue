@@ -65,7 +65,7 @@
   .wscnph img{
     max-width: 34.2rem;
   }
-  #cd-main-nav{
+  #cd-nav{
     display: none;
   }
   @media screen and (max-width: 1370px) {
