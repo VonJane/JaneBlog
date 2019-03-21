@@ -21,9 +21,15 @@
         </el-col>
       </el-row>
     </div>
+    <remote-script src="https://utteranc.es/client.js" repo="VonJane/Blog"
+                   issue-term="url"
+                   label="Comment"
+                   theme="github-light"
+                   crossorigin="anonymous"
+                   async></remote-script>
   </div>
 </template>
-<script>
+<script >
   export default {
     name:"Detail",
     data(){
@@ -56,6 +62,8 @@
   }
 </script>
 <style scoped>
+
+
   .overall {
     box-sizing:content-box;
     width: 100%;
@@ -104,6 +112,14 @@
   .headline:hover{
     color:#0085bd;
   }
+
+  .utterances{
+    background-color: black;
+  }
+  .utterances-frame{
+    background-color: green;
+  }
+
   @media screen and (max-width: 1366px) {
     .overall {
       /*background-color: #A0A0A0;*/

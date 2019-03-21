@@ -8,6 +8,7 @@ import element from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import 'lib-flexible/flexible.js'
 import $ from 'jquery'
+import importJS from './common/js/importJS.js'
 
 import '@/icons'
 
@@ -22,6 +23,7 @@ new Vue({
   router,
   axios,
   $,
+  importJS,
   components: { App },
   template: '<App/>'
 })
