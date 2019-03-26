@@ -55,6 +55,10 @@
     padding: 90px 90px 0;
   }
 
+  span.label {
+    background-color: #FFAAD5;
+  }
+
   #app {
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
