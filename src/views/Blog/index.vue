@@ -133,6 +133,7 @@
 
   .article_content{
     font-family: "Hiragino Sans GB";
+    text-align: left;
     color: rgba(28,32,24,.8);
     padding: 10px 0 50px 0;
   }
