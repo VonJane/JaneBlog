@@ -112,6 +112,7 @@
     font-size: 1.6em;
     text-transform: none;
     text-decoration: none;
+    list-style: disc;
     /*margin: 0;*/
   }
 

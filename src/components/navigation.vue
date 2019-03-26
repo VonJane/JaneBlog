@@ -24,6 +24,9 @@
 </script>
 
 <style scoped>
+  ul,ol {
+    list-style: none;
+  }
   ._layout {
     width: 100%;
     display: flex;

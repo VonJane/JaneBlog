@@ -23,7 +23,7 @@
   import navigation from './components/navigation';
   import bottom from './components/bottom';
   import '../static/js/menu.js';
-
+  // logo 字体为 harlow solid italic
   export default {
     name: 'App',
     components: {
@@ -55,8 +55,18 @@
     padding: 90px 90px 0;
   }
 
-  span.label {
-    background-color: #FFAAD5;
+
+  code {
+    background-color: #ff4a6e;
+    color: white;
+    align-items: center;
+    font-weight: 400;
+    display: inline-block;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 120%;
+    border-radius: 5px;
+    margin: auto 3px;
   }
 
   #app {
