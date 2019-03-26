@@ -1,5 +1,6 @@
 <template>
   <span>
+    <div id="overall">
   <div class="basics_info">
     <img src="../../assets/myself.jpg">
     <div class="basics_explain">
@@ -12,11 +13,13 @@
       but some of us are looking at the stars.
     </div>
   </div>
+       </div>
   <div id="myself" style="font-family: Raleway-Light">
     <p>
       We are all in the gutter, but some of us are looking at the stars.
     </p>
   </div>
+
 </span>
 </template>
 <script>
@@ -30,6 +33,7 @@
     justify-content: space-between;
     padding: 0 5%;
     position: relative;
+
   }
   .basics_info img {
     /* border: 1px solid rgb(226, 223, 223); */
@@ -46,7 +50,7 @@
     font-size: 14px;
     text-transform: none;
     text-decoration: none;
-    margin: 0 0 1.6em;
+    /*margin: 0 0 1.6em;*/
     text-align: left;
     color:rgba(28,32,24,.8);
     width: 40%;
@@ -66,6 +70,24 @@
      /*font-size: 1rem;*/
   /*}*/
   @media screen and (max-width: 1366px) {
+    .basics_explain {
+      display: none;
+    }
+    #overall {
+      margin-left: 15%;
+      /*background-color: #A0A0A0;*/
+      /*box-sizing:inherit;*/
+      width: 70%;
+      /*padding: 0 15%;*/
+      /*font-weight: 500;*/
+      /*font-style: normal;*/
+      /*line-height: 1.6em;*/
+      /*font-size: 0.5rem;*/
+      text-transform: none;
+      text-decoration: none;
+      /*margin: 0 0 1.5em;*/
+
+    }
     .basics_info {
       display: flex;
       justify-content: space-between;
@@ -82,9 +104,7 @@
       max-width: 100%;
       max-height: 100%;
     }
-    .basics_explain {
-      display: none;
-    }
+
     #myself{
       display: block;
       font-weight: 400;
