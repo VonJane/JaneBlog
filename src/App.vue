@@ -94,5 +94,8 @@
     #cd-nav{
       display: block;
     }
+    #cd-main-nav ul{
+      list-style: none;
+    }
   }
 </style>

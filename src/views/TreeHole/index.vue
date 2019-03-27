@@ -35,6 +35,13 @@
   import qs from 'qs'
     export default {
       name: "TreeHole",
+      mounted(){
+        var navigationContainer = $('#cd-nav'),
+          mainNavigation = navigationContainer.find('#cd-main-nav ul');
+        //we need to remove the transitionEnd event handler (we add it when scolling up with the menu open)
+        mainNavigation.off('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend').toggleClass('is-visible');
+        $('.cd-nav-trigger').removeClass('menu-is-open');
+        },
       data(){
           return {
             leftform:'left',
