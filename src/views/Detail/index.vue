@@ -22,7 +22,7 @@
       </el-row>
     </div>
     <remote-script src="https://utteranc.es/client.js" repo="VonJane/Blog"
-                   issue-term="url"
+                   :issue-term="articleId"
                    label="Comment"
                    theme="github-light"
                    crossorigin="anonymous"
