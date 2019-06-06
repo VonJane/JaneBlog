@@ -24,7 +24,7 @@
       data(){
           return {
             leftform:'left',
-            ReadList: {}
+            ReadList: ''
           }
       },
       methods:{
