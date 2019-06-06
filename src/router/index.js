@@ -2,7 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Blog from '@/views/Blog'
 import About from '@/views/About'
-import TreeHole from '@/views/TreeHole'
+import ReadList from '@/views/ReadList'
 import Category from '@/views/Category'
 import Detail from '@/views/Detail'
 Vue.use(Router)
@@ -20,9 +20,9 @@ export default new Router({
       component:About
     },
     {
-      path:'/TreeHole',
-      name:'TreeHole',
-      component:TreeHole
+      path:'/ReadList',
+      name:'ReadList',
+      component:ReadList
     },
     {
       path:'/Blog',

@@ -9,7 +9,7 @@
       <nav id="cd-main-nav">
         <ul>
           <li><router-link :to="'/About'">About</router-link></li>
-          <li><router-link :to="'/TreeHole'">TreeHole</router-link></li>
+          <li><router-link :to="'/ReadList'">ReadList</router-link></li>
           <li><router-link :to="'/Blog'">Blog</router-link></li>
           <li><a @click="gotoTop">返回顶部</a></li>
         </ul>

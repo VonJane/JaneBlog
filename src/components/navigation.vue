@@ -6,7 +6,7 @@
     <div class="_layout_right">
       <ul>
         <li><router-link :to="'/Blog'">Blog</router-link></li>
-        <li><router-link :to="'/TreeHole'">TreeHole</router-link></li>
+        <li><router-link :to="'/ReadList'">ReadList</router-link></li>
         <li><router-link :to="'/About'">About</router-link></li>
       </ul>
     </div>
